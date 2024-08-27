@@ -1,4 +1,4 @@
-## Django Summery Admin
+## Django Summary Admin
 
 Using summaries for totals in Django admin
 
