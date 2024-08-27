@@ -1,8 +1,8 @@
 ## Django Summery Admin
 
-Possibilita a criação de um summary (totalizador) no admin do Django
+Using summaries for totals in Django admin
 
-### Instalação:
+### Installation:
 
 ```shell
 pip install -i django-summary-admin
@@ -15,3 +15,23 @@ INSTALLED_APPS = [
     ...
 ]
 ```
+
+### Usage:
+
+```python
+# admin.py
+from django.db import models
+
+from django_summary_admin.admin import SummaryAdmin
+
+
+class MyModelAdmin(SummaryAdmin):
+    fields = [
+        'description',
+        'total', # Same name in aggregate
+    ]
+    
+    def get_summary(self, queryset):
+        return queryset.aggregate(total=models.Sum('value'))
+```
+
