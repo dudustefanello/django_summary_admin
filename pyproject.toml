@@ -10,7 +10,7 @@ version = "0.1"
 dependencies = [
     "django>=5.0",
 ]
-description = "Utilizar totalizadores no admin do Django"
+description = "Utilizar totalizadores (summary) no admin do Django"
 readme = "README.md"
 requires-python = ">= 3.10"
 authors = [

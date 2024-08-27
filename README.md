@@ -1,5 +1,7 @@
 ## Django Summery Admin
 
+Possibilita a criação de um summary (totalizador) no admin do Django
+
 ### Instalação:
 
 ```shell
