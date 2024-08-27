@@ -5,7 +5,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "django-tuss"
+name = "django-summary-admin"
 version = "0.1"
 dependencies = [
     "django>=5.0",
