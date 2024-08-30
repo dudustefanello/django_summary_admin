@@ -2,7 +2,7 @@ name: Upload Python Package - Test
 
 on:
   release:
-    types: [prereleased]
+    types: [released]
 
 permissions:
   contents: read
