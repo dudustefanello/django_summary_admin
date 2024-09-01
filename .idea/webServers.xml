@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ac064cba-3718-4e0c-8a8d-f7843887159b" name="clinica" url="">
+        <fileTransfer mountedRoot="C:\Users\eduar\PycharmProjects\clinicaWorkspace" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

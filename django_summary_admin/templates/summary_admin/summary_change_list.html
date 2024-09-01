@@ -7,3 +7,8 @@
     {% summary_result_list cl %}
     {% if action_form and actions_on_bottom and cl.show_admin_actions %}{% admin_actions %}{% endif %}
 {% endblock %}
+
+{% block pagination %}
+  {{ block.super }}
+  {% include 'summary_admin/change_list_resume.html' %}
+{% endblock %}

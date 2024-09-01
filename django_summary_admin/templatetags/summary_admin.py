@@ -28,6 +28,6 @@ def summary_result_list_tag(parser, token):
     return InclusionAdminNode(
         parser, token,
         func=summary_result_list,
-        template_name='../django_summary_admin/summary_change_list_results.html',
+        template_name='../summary_admin/summary_change_list_results.html',
         takes_context=True,
     )

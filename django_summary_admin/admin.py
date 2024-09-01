@@ -2,14 +2,21 @@ from django.contrib import admin
 
 
 class SummaryAdmin(admin.ModelAdmin):
-    change_list_template = 'django_summary_admin/summary_change_list.html'
+    change_list_template = 'summary_admin/summary_change_list.html'
 
     def get_summary(self, queryset):
+        return None
+
+    def get_resume(self, queryset):
+        """
+        :return: {title: string, headers: [], footers: [], data: [[]]}
+        """
         return None
 
     def changelist_view(self, request, extra_context=None):
         view = super().changelist_view(request, extra_context)
         try:
+            view.context_data['resume'] = self.get_resume(view.context_data['cl'].queryset)
             view.context_data['summary'] = self.get_summary(view.context_data['cl'].queryset)
         except KeyError:
             pass
