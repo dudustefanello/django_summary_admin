@@ -4,7 +4,7 @@
 
 {% block object-tools-items %}
     <li>
-        <a href="{{ links.url }}" class="historylink">{{ links.descricao }}</a>
+        <a href="{{ context.links.url }}" class="historylink">{{ context.links.descricao }}</a>
     </li>
     {{ block.super }}
 {% endblock %}
