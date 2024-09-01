@@ -1,5 +1,9 @@
 name: Upload Python Package - Private
 
+on:
+  release:
+    types: [prereleased]
+
 permissions:
   contents: read
 
