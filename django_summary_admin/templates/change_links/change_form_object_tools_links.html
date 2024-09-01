@@ -3,8 +3,10 @@
 {% load i18n %}
 
 {% block object-tools-items %}
+  {% for link in links %}
     <li>
-        <a href="{{ context.links.url }}" class="historylink">{{ context.links.descricao }}</a>
+      <a href="{{ link.url }}" class="historylink">{{ link.descricao }}</a>
     </li>
-    {{ block.super }}
+  {% endfor %}
+  {{ block.super }}
 {% endblock %}
