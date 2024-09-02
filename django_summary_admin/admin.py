@@ -7,7 +7,7 @@ class SummaryAdmin(admin.ModelAdmin):
     def get_summary(self, queryset):
         return None
 
-    def get_resume(self, queryset):
+    def get_resume(self, request):
         """
         :return: {title: string, headers: [], footers: [], data: [[]]}
         """
@@ -17,7 +17,7 @@ class SummaryAdmin(admin.ModelAdmin):
         view = super().changelist_view(request, extra_context)
         try:
             view.context_data['resume'] = self.get_resume(view.context_data['cl'].queryset)
-            view.context_data['summary'] = self.get_summary(view.context_data['cl'].queryset)
+            view.context_data['summary'] = self.get_summary(request)
         except KeyError:
             pass
         except AttributeError:
