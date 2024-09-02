@@ -27,6 +27,6 @@ jobs:
     - name: Publish package
       uses: pypa/gh-action-pypi-publish@v1.9.0
       with:
-        repository_url: http://server.clinicaensinergia.com.br:8000/
+        repository_url: https://pip.stefanello.cc/simple/
         user: dudustefanello
         password: ${{ secrets.PYPI_API_TOKEN_PRIVATE }}
